@@ -9,7 +9,7 @@ name: Labeler
 on: [push]
 
 jobs:
-  label:
+  gist:
 
     runs-on: ubuntu-latest
 
@@ -19,7 +19,6 @@ jobs:
     - name: Append to Gist
       uses: andymckay/append-gist-action@0.1
       with:
-        gistURL: https://gist.github.com/
+        gistURL: https://gist.github.com/debianmaster
         token: "${{ secrets.GITHUB_TOKEN }}"
         file: test.txt
-        suffix: mysuffix
