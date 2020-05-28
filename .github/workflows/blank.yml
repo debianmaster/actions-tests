@@ -4,8 +4,6 @@ on :
   pull_request :
     branches :
     - master
-    types :
-    - the Opened
 
 jobs :
   schedule_publish :
