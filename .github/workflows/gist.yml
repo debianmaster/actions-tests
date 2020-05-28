@@ -19,6 +19,6 @@ jobs:
     - name: Append to Gist
       uses: andymckay/append-gist-action@0.1
       with:
-        gistURL: https://gist.github.com/debianmaster
+        gistURL: https://gist.github.com/debianmaster/test1234
         token: "${{ secrets.GITHUB_TOKEN }}"
         file: test.txt
