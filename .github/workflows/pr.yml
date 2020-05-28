@@ -28,7 +28,7 @@ jobs:
         issue-number: ${{ github.event.issue.number }}
         body: |
           Hey, @${{ github.event.comment.user.login }}!
-          :rocket: Started new cluster with name ${{ env.SLOT_NAME }} is beginning! :rocket:
+          :rocket: Started new cluster with name ${{ env.TAG }} is beginning! :rocket:
       
     - name: setup cluster
       run: |
