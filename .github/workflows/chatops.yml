@@ -17,7 +17,7 @@ jobs:
     - name: "Set env variables from chat message"
       run: |
         echo "hello"
-        echo ${{github.run_number}}
+        echo ${{github.run_id}}
         echo "bye"
         pattern="^\/create (\w+)$"
         [[ "${{ github.event.comment.body }}" =~ $pattern ]]
