@@ -1,10 +1,5 @@
-APISERVER:
-  - ./cmd/server/**/*
-MANAGER:
-  - ./cmd/manager/**/*
-AGENT:
-  - ./cmd/agent/**/*
-ROOT:
-  - ./*
-WORKFLOWS:  
-  - .github/workflows/*  
+APISERVER: ./cmd/server/**/*
+MANAGER: ./cmd/manager/**/*
+AGENT: ./cmd/agent/*
+ROOT: ./*
+WORKFLOWS: .github/workflows/*
