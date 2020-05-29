@@ -24,7 +24,7 @@ jobs:
         echo ${{github.run_id}}
         echo "bye"
         pattern="^\/create (\w+)$"
-        [[ "${{ github.event.comment.body }}" =~ $pattern ]]
+        [[ "${{ github.event.issue.body }}" =~ $pattern ]]
         echo ::set-env name=TAG::"${BASH_REMATCH[1]}"
         echo $TAG
         
