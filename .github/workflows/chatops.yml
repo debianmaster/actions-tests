@@ -13,7 +13,11 @@ jobs:
     if: contains(github.event.comment.body, '/create')
     
     steps:
-
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: |
+        echo "$GITHUB_CONTEXT"
     - name: "Set env variables from chat message"
       run: |
         echo "hello"
