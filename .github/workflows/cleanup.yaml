@@ -1,15 +1,14 @@
+name: TagBot
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: "* * * * *"
   issues:
     types: [opened, reopened]
 env:
   GITHUB_CONTEXT: ${{ toJson(github) }}
-run: |
-  echo "$GITHUB_CONTEXT"
 jobs:
   TagBot:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo ${GITHUB_CONTEXT}
+          echo ${GITHUB_CONTEXT}
