@@ -16,6 +16,7 @@ jobs:
 
     - name: "Set env variables from chat message"
       run: |
+        echo ${{github.run_number}}
         pattern="^\/create (\w+)$"
         [[ "${{ github.event.comment.body }}" =~ $pattern ]]
         echo ::set-env name=TAG::"${BASH_REMATCH[1]}"
