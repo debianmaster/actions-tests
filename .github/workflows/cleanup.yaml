@@ -1,7 +1,7 @@
 name: TagBot
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "1 * * * 0"
   issues:
     types: [opened, reopened]
 env:
