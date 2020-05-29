@@ -51,4 +51,4 @@ jobs:
         body: |
           Hey, @${{ github.event.comment.user.login }}!
           :tada: Cluster to ${{ env.TAG }} completed! :tada:
-          You should be able to browse it at ${{ env.OUTPUT }}. Happy testing!
+          You should be able to browse it at https://github.com/debianmaster/actions-tests/actions/runs/${{github.run_id}} Happy testing!
