@@ -1,9 +1,7 @@
 APISERVER:
   - ./cmd/server/**/*
-  - ./build/Dockerfile.server
 MANAGER:
   - ./cmd/manager/**/*
-  - ./build/Dockerfile
 AGENT:
   - ./cmd/agent/**/*
 ROOT:
