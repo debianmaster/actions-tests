@@ -1,15 +1,13 @@
 name: Build and Deploy in Staging
-
+env:
+  GITHUB_CONTEXT: ${{ toJson(github) }}
 on:
   push:
     branches: [ master ]
   create:
     tags:
       - 'v*.*.*'
- env:
-  GITHUB_CONTEXT: ${{ toJson(github) }}
-  
- jobs:
+jobs:
   setup:
     runs-on: self-hosted
     steps:
