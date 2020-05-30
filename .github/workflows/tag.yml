@@ -9,7 +9,7 @@ on:
       - 'v*.*.*'
 jobs:
   setup:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: set git config
       run: |
