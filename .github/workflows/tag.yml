@@ -1,4 +1,4 @@
-name: Build and Deploy in Staging
+name: Release
 env:
   GITHUB_CONTEXT: ${{ toJson(github) }}
 on:
@@ -11,9 +11,14 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-    - name: set git config
+    - name: git config
       run: |
-        echo $GITHUB_CONTEXT
+        echo ${{ github.event.action }}
+        echo ${{ github.event_name }}
+        echo ${{ github.event.release.draft }}
+        echo ${{ github.event.release.prerelease }}
+        echo ${{ github.event.release.tag_name }}
+        
         
         
 
